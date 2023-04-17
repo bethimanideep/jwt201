@@ -8,7 +8,7 @@ db.transactions.aggregate([
   },
   {
     $addFields: {
-      total_balance: { $subtract: [ "$deposits", "$withdrawals" ] }
+      totalBalance: { $subtract: [ "$deposits", "$withdrawals" ] }
     }
   },
   {
@@ -31,7 +31,7 @@ db.transactions.aggregate([
   },
   {
     $sort: {
-      total_balance: -1
+      totalBalance: -1
     }
   }
 ])
